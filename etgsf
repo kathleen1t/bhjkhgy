@@ -1,0 +1,49 @@
+class Time
+{
+ //Data fields hour, minute, and second that represnt a time
+  private int hour;
+  private int minute;
+  private int second;
+}
+//A no arg contructor that contructs a Time object with a specified elapsed time
+//the current time can be obtained using System.currentTimeMillis()
+
+public Time()
+{
+ this(System.currentTimeMillis()); 
+}
+
+//A constructor with a specified elapsed time since midnight, january 1, 1970
+public Time(long elpasedTime)
+{
+ setTime(elapsedTime); 
+}
+
+//A constructor with the specified hour, minute, an second.
+public Time(int hour, int minute, int second)
+{
+ this.hour = hour;
+ this.minute = minute;
+ this.second = second;
+}
+
+//getter methods
+ public int getHour()
+     {
+       return hour;
+     }
+  public int getMinute()
+     {
+       return minute;
+     }
+     
+  public int getSecond()
+     {
+       return second;
+     }
+     
+public void setTime(long elapsedTime)
+{
+ //Obtain the totoal seconds since  the midnight Jan 1st
+  long totalSeconds = elpasedTime / 1000;
+}
